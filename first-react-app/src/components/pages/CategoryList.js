@@ -8,8 +8,16 @@ const CategoryList = () => {
     return (
         <div>
             <h1>Categories: </h1>
-            <h2><Link to='/categories/pizzas/1'>Pizza</Link></h2>
-            <h2><Link to='/categories/hamburgers/1'>Hamburger</Link></h2>
+            <span><Link to='/categories/meals/1'>Meals</Link> </span>
+            <span><Link to='/categories/pizzas/1'>Pizzas</Link> </span>
+            <span><Link to='/categories/hamburgers/1'>Hamburgers</Link> </span>
+            <span><Link to='/categories/sauces/1'>Sauces</Link> </span>
+            <span><Link to='/categories/pastas/1'>Pastas</Link> </span>
+            <span><Link to='/categories/legumes/1'>Legumes</Link> </span>
+            <span><Link to='/categories/nuts/1'>Nuts</Link> </span>
+            <span><Link to='/categories/fruits/1'>Fruits</Link> </span>
+
+
 
             {/* <Route path='/pizzas/:id' children={<Details/>}/>
             <Route path='/hamburgers/:id' children={<Details/>}/> */}
