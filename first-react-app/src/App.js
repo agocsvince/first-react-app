@@ -19,6 +19,7 @@ const App = props => {
                 <ListView />
               </div>
             </Route>
+          </div>
           <Route path="/details/:food"/>
           <Route path="/categories" component={CategoryList}/>
           <Route path="/categories/:categoryURL/:id" children={<Category/>}/>
@@ -26,6 +27,7 @@ const App = props => {
           <Route path="/random"/>
           <Footer />
         </Router>
+        
       </div>
   );
 }
