@@ -1,6 +1,7 @@
 import './App.css';
 import react from 'react';
 import  { BrowserRouter as Router, Route } from 'react-router-dom';
+import CategoryList from './components/pages/CategoryList';
 
 const App = props => {
   return (
@@ -8,7 +9,7 @@ const App = props => {
       <Router>
         <Route path="/"/>
         <Route path="/details/:food"/>
-        <Route path="/categories"/>
+        <Route path="/categories" component={CategoryList}/>
         <Route path="/favorites"/>
         <Route path="/random"/>
       </Router>
