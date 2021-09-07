@@ -16,12 +16,6 @@ const CategoryList = () => {
             <span><Link to='/categories/legumes/1'>Legumes</Link> </span>
             <span><Link to='/categories/nuts/1'>Nuts</Link> </span>
             <span><Link to='/categories/fruits/1'>Fruits</Link> </span>
-
-
-
-            {/* <Route path='/pizzas/:id' children={<Details/>}/>
-            <Route path='/hamburgers/:id' children={<Details/>}/> */}
-            
         </div>
     )
 }
