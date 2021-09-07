@@ -1,21 +1,15 @@
-import axios from 'axios'
 import React from 'react'
-import { useState, useEffect } from 'react'
+import  { BrowserRouter as Router, Route } from 'react-router-dom';
+import Category from './Category';
+import {Link} from 'react-router-dom';
 
-const CategoryList  = () => {
-    const [categories, setCategories] = useState([]);
-
-    useEffect(() => {
-        axios.get('https://fr-en.openfoodfacts.org/category/pizzas/1.json').then((response) => {
-            console.log(response);
-            setCategories(response.data.products);
-        })
-            .catch(err => { console.log(err); })
-    }, [])
-
+const CategoryList = () => {
     return (
         <div>
-            {categories.map((product) => (<h4 key={product.product_name}>{product.product_name}</h4>))}
+            <h1>Categories: </h1>
+            <h2><Link to='/pizza'>Pizza</Link></h2>
+            <h2><Link to='/hamburger'>Hamburger</Link></h2>
+            {/* <Route path="/category" component={Category}/> */}
         </div>
     )
 }
