@@ -4,7 +4,6 @@
     width: 100%;
     border-bottom: 1px solid;
     display: flex;
-    padding: 0 2rem;
     background: rgb(248, 143, 143);
     box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }

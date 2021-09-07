@@ -1,0 +1,24 @@
+#main {
+    padding-top: 80px;
+}
+
+.product {
+    height: auto;
+    background-color: salmon;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.product a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.product a img {
+    height: 20%;
+    width: auto;
+}

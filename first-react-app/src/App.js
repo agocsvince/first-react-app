@@ -1,4 +1,5 @@
 import './App.css';
+import './css/style.css'
 import react from 'react';
 import  { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/layouts/Header';
@@ -11,11 +12,17 @@ const App = props => {
       <div className="container">
         <Router>
           <Header />
-          <Route path="/" component={ListView}/>
-          <Route path="/details/:food"/>
-          <Route path="/categories"/>
-          <Route path="/favorites"/>
-          <Route path="/random"/>
+          <div id="main">
+            <Route path="/">
+              <div className="grid">
+                <ListView />
+              </div>
+            </Route>
+            <Route path="/details/:food"/>
+            <Route path="/categories"/>
+            <Route path="/favorites"/>
+            <Route path="/random"/>
+          </div>
           <Footer />
         </Router>
       </div>
