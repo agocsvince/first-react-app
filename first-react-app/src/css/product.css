@@ -16,13 +16,16 @@
     color: #000;
     display: flex;
     flex-direction: column;
-
 }
 
 .product a .product-img {
     margin: 1rem;
     text-align: center;
     line-height: 100px;
+}
+
+.product a .product-img img {
+    border-radius: 10px;
 }
 
 .product a .product-title {
