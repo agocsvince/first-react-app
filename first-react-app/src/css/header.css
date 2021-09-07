@@ -13,6 +13,11 @@
     display: flex;
 }
 
+.header .title {
+    text-decoration: none;
+    color: #000;
+}
+
 .header .tab {
     margin-left: 2rem;
     font-weight: 500;

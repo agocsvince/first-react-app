@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Header = props => {
     return (
         <header className="header">
-            <h1 className="title">YourFood</h1>
+            <Link className="title" to="/"><h1>YourFood</h1></Link>
             <div className="header-tabs">
                 <Link className="tab" to="/categories">Categories</Link>
                 <Link className="tab" to="/favorites">Favorites</Link>
