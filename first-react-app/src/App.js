@@ -3,6 +3,7 @@ import react from 'react';
 import  { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
+import ListView from './components/pages/ListView'
 
 const App = props => {
   return (
@@ -10,7 +11,7 @@ const App = props => {
       <div className="container">
         <Router>
           <Header />
-          <Route path="/"/>
+          <Route path="/" component={ListView}/>
           <Route path="/details/:food"/>
           <Route path="/categories"/>
           <Route path="/favorites"/>
