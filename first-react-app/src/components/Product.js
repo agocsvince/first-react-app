@@ -11,8 +11,10 @@ const Product = props => {
     return (
         <div className="product">
             <Link to={url}>
-                {name}
-                <img src={product.image_front_small_url} alt=""/>
+                <div className="product-img">
+                    <img src={product.image_front_small_url} alt={name} />
+                </div>
+                <p className="product-title">{name}</p>
             </Link>
         </div>
     )

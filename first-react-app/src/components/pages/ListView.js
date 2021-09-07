@@ -7,10 +7,10 @@ const ListView = props => {
         products: []
     });
 
-    // useEffect(() => {
-    //     axios.get('https://world.openfoodfacts.org/products.json')
-    //         .then(res => setProducts({ products: res.data.products }))
-    // }, [])
+    useEffect(() => {
+        axios.get('https://world.openfoodfacts.org/products.json')
+            .then(res => setProducts({ products: res.data.products }))
+    }, [])
 
     return products.products.map((product) => 
     <Product key={product.id} product={product} />)
