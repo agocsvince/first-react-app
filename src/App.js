@@ -27,7 +27,7 @@ const App = props => {
         <Router>
           <Header />
           <div id="main">
-            <Route path="/">
+            <Route exact path="/">
               <div className="grid">
                 <ListView page={currentPage}/>
               </div>
