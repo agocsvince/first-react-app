@@ -4,7 +4,6 @@
     width: 100%;
     border-bottom: 1px solid;
     display: flex;
-    padding: 0 2rem;
     background: rgb(248, 143, 143);
     box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
@@ -12,11 +11,14 @@
 .header .header-tabs {
     margin: auto 0;
     display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 .header .title {
     text-decoration: none;
     color: #000;
+    margin-left: 2rem;
 }
 
 .header .tab {
@@ -26,6 +28,6 @@
     color: #000;
 }
 
-.header .tab:first-of-type {
-    margin-left: 30rem;
+.header .tab:last-of-type {
+    margin-right: 2rem;
 }
