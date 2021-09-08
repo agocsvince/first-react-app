@@ -5,6 +5,7 @@ import CategoryList from './components/pages/CategoryList';
 import Category from './components/pages/Category';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
+import Details from './components/pages/Details';
 
 const App = props => {
   return (
@@ -15,6 +16,7 @@ const App = props => {
           <Route path="/details/:food"/>
           <Route path="/categories" component={CategoryList}/>
           <Route path="/categories/:categoryURL/:id" children={<Category/>}/>
+          <Route path="/products/:id" children={<Details/>}/>
           <Route path="/favorites"/>
           <Route path="/random"/>
           <Footer />

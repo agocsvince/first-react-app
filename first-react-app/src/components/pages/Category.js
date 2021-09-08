@@ -19,7 +19,11 @@ const Category  = () => {
 
     return (
         <div>
-            {category.map((product) => (<h4 key={product.id}><a href={`https://fr-en.openfoodfacts.org/products/${product.id}.json`}>{product.product_name}</a></h4>))}
+            {category.map((product) => (<h4 key={product.id}><Link to={`/products/${product.id}`}>{product.product_name}</Link></h4>))}
+            {/* `https://fr-en.openfoodfacts.org/products/${product.id}.json` */}
+            {/* <Link to={`/products/${product.id}`}></Link> */}
+            {/* <Link to={`products/${product.id}`}></Link> */}
+
         </div>
     )
 }
