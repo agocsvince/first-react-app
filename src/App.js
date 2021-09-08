@@ -1,7 +1,7 @@
 import './App.css';
 import './css/style.css'
 import react, { useEffect } from 'react';
-import  { BrowserRouter as Router, Route } from 'react-router-dom';
+import  { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import CategoryList from './components/pages/CategoryList';
 import Category from './components/pages/Category';
 import Header from './components/layouts/Header';
@@ -15,11 +15,11 @@ const App = props => {
   let currentPage = 1
 
   const nextPage = e => {
-    currentPage++
+    num++
   }
 
   const prevPage = e => {
-    currentPage--
+    num--
   }
 
   let search = window.location.search;
@@ -32,12 +32,12 @@ const App = props => {
         <Router>
           <Header />
           <div id="main">
-            <Route path="/page">
+            <Route path="/page/:page">
               <div className="grid">
                 <ListView page={num}/>
               </div>
-              <button onClick={prevPage}>Prev</button>
-              <button onClick={nextPage}>Next</button>
+              <Link to={`/page`}><button onClick={prevPage}>Prev</button></Link>
+              <Link to={`/page`}><button onClick={nextPage}>Next</button></Link>
             </Route>
           </div>
           <Route path="/categories" component={CategoryList}/>
