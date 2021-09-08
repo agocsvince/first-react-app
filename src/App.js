@@ -35,7 +35,6 @@ const App = props => {
               <button onClick={nextPage}>Next</button>
             </Route>
           </div>
-          <Route path="/details/:food"/>
           <Route path="/categories" component={CategoryList}/>
           <Route path="/categories/:categoryURL/:id" children={<Category/>}/>
           <Route path="/products/:id" children={<Details/>}/>

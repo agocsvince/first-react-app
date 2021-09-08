@@ -4,7 +4,7 @@ import '../css/product.css';
 
 const Product = props => {
     let product = props.product;
-    let url = "/details/" + product.id
+    let url = "/products/" + product.id
 
     let name = product.generic_name === "" ? product.brands.split(',', 1) : product.generic_name
     return (
