@@ -6,12 +6,10 @@ import CategoryList from './components/pages/CategoryList';
 import Category from './components/pages/Category';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
-<<<<<<< HEAD:src/App.js
 import ListView from './components/pages/ListView'
 import PageContext from './components/pages/ListView';
-=======
 import Details from './components/pages/Details';
->>>>>>> development:first-react-app/src/App.js
+
 
 const App = props => {
   let currentPage = 1
