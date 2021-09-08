@@ -11,7 +11,7 @@ const ListView = props => {
     console.log(props.page)
 
     useEffect(() => {
-        axios.get(`https://world.openfoodfacts.org/search?page=${props.page}&page_size=100.json`)
+        axios.get(`https://world.openfoodfacts.org/search?page=${props.page}&page_size=10.json`)
             .then(res => {
                 console.log(res)
                 setProducts({ products: res.data.products });

@@ -22,14 +22,19 @@ const App = props => {
     currentPage--
   }
 
+  let search = window.location.search;
+  let params = new URLSearchParams(search);
+  let num = params.get('num');
+  console.log(num);
+
   return (
       <div className="container">
         <Router>
           <Header />
           <div id="main">
-            <Route exact path="/">
+            <Route path="/page">
               <div className="grid">
-                <ListView page={currentPage}/>
+                <ListView page={num}/>
               </div>
               <button onClick={prevPage}>Prev</button>
               <button onClick={nextPage}>Next</button>
