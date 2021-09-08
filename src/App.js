@@ -6,8 +6,12 @@ import CategoryList from './components/pages/CategoryList';
 import Category from './components/pages/Category';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
+<<<<<<< HEAD:src/App.js
 import ListView from './components/pages/ListView'
 import PageContext from './components/pages/ListView';
+=======
+import Details from './components/pages/Details';
+>>>>>>> development:first-react-app/src/App.js
 
 const App = props => {
   let currentPage = 1
@@ -36,6 +40,7 @@ const App = props => {
           <Route path="/details/:food"/>
           <Route path="/categories" component={CategoryList}/>
           <Route path="/categories/:categoryURL/:id" children={<Category/>}/>
+          <Route path="/products/:id" children={<Details/>}/>
           <Route path="/favorites"/>
           <Route path="/random"/>
           <Footer />
