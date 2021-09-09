@@ -22,16 +22,16 @@ const ListView = props => {
     }, [page])
 
     return (
-        
-        products.products.map((product) => 
         <div>
-            <div>
-                <Product key={product.id} product={product} />
-            </div>
+            {products.products.map((product) => (
+                <span>
+                    <Product key={product.id} product={product} />
+                </span>))
+            }
             <Link to={`/page/${(page-1)}`}>Prev</Link>
             <Link to={`/page/${parseInt(page) + 1}`}>Next</Link>
         </div>
-        )
+        
     )
 }
 
