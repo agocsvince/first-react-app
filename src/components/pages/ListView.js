@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { useParams, Link} from 'react-router-dom';
 import axios from 'axios';
 import Product from '../Product';
+
 
 
 const ListView = props => {
@@ -8,18 +10,27 @@ const ListView = props => {
         products: []
     });
 
-    console.log(props.page)
+    let { page } = useParams();
 
     useEffect(() => {
-        axios.get(`https://world.openfoodfacts.org/search?page=${props.page}&page_size=100.json`)
+        axios.get(`https://world.openfoodfacts.org/search?page=${page}&page_size=10.json`)
             .then(res => {
-                console.log(res)
                 setProducts({ products: res.data.products });
             })
-    }, [props.page])
+    }, [page])
 
-    return products.products.map((product) => 
-    <Product key={product.id} product={product} />)
+    return (
+        <div>
+            {products.products.map((product) => (
+                <span key={product.id}>
+                    <Product key={product.id} product={product} />
+                </span>))
+            }
+            <Link to={`/page/${(page-1)}`}>Prev</Link>
+            <Link to={`/page/${parseInt(page) + 1}`}>Next</Link>
+        </div>
+        
+    )
 }
 
 export default ListView;
