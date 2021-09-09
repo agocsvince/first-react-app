@@ -30,4 +30,5 @@
 
 .header .tab:last-of-type {
     margin-right: 2rem;
+    opacity: .3;
 }
