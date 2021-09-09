@@ -13,7 +13,7 @@ const ListView = props => {
     let { page } = useParams();
 
     useEffect(() => {
-        axios.get(`https://world.openfoodfacts.org/search?page=${page}&page_size=10.json`)
+        axios.get(`https://world.openfoodfacts.org/search?page=${page}&page_size=52.json`)
             .then(res => {
                 setProducts({ products: res.data.products });
             })
@@ -21,15 +21,19 @@ const ListView = props => {
 
     return (
         <div>
-            {products.products.map((product) => (
-                <span key={product.id}>
-                    <Product key={product.id} product={product} />
-                </span>))
-            }
-            <Link to={`/page/${(page-1)}`}>Prev</Link>
-            <Link to={`/page/${parseInt(page) + 1}`}>Next</Link>
+            <div className="grid">
+                {products.products.map((product) => (
+                    <span key={product.id}>
+                        <Product key={product.id} product={product} />
+                    </span>))
+                }
+                
+            </div>
+            <div className="page-buttons">
+                <Link to={`/page/${(page-1)}`}>Prev</Link>
+                <Link to={`/page/${parseInt(page) + 1}`}>Next</Link>
+            </div>
         </div>
-        
     )
 }
 

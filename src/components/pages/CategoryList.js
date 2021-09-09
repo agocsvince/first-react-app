@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 
 const CategoryList = () => {
     return (
-        <div>
+        <div className="m-2">
             <h1>Categories: </h1>
             <span><Link to='/categories/meals/1'>Meals</Link> </span>
             <span><Link to='/categories/pizzas/1'>Pizzas</Link> </span>
