@@ -11,11 +11,7 @@ const Product = props => {
     let name = product.generic_name === "" ? product.brands.split(',', 1) : product.generic_name
 
     const onClick = (product) => {
-        console.log(favorites)
-        console.log(product)
-        
         setFavorites(prevFavorites => [...favorites, product])
-        console.log(favorites)
     }
 
     return (
