@@ -22,7 +22,7 @@ const ListView = props => {
     return (
         <div>
             {products.products.map((product) => (
-                <span>
+                <span key={product.id}>
                     <Product key={product.id} product={product} />
                 </span>))
             }
