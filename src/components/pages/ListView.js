@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams} from 'react-router-dom';
+import { useParams, Link} from 'react-router-dom';
 import axios from 'axios';
 import Product from '../Product';
 
@@ -21,8 +21,18 @@ const ListView = props => {
             })
     }, [page])
 
-    return products.products.map((product) => 
-    <Product key={product.id} product={product} />)
+    return (
+        
+        products.products.map((product) => 
+        <div>
+            <div>
+                <Product key={product.id} product={product} />
+            </div>
+            <Link to={`/page/${(page-1)}`}>Prev</Link>
+            <Link to={`/page/${parseInt(page) + 1}`}>Next</Link>
+        </div>
+        )
+    )
 }
 
 export default ListView;

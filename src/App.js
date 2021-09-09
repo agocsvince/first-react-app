@@ -12,20 +12,20 @@ import Details from './components/pages/Details';
 
 
 const App = props => {
-  let currentPage = 1
+  // let currentPage = 1
 
-  const nextPage = e => {
-    num++
-  }
+  // const nextPage = e => {
+  //   num++
+  // }
 
-  const prevPage = e => {
-    num--
-  }
+  // const prevPage = e => {
+  //   num--
+  // }
 
-  let search = window.location.search;
-  let params = new URLSearchParams(search);
-  let num = params.get('num');
-  console.log(num);
+  // let search = window.location.search;
+  // let params = new URLSearchParams(search);
+  // let num = params.get('num');
+  // console.log(num);
 
   return (
       <div className="container">
@@ -34,10 +34,10 @@ const App = props => {
           <div id="main">
             <Route path="/page/:page">
               <div className="grid">
-                <ListView page={num}/>
+                <ListView />
               </div>
-              <Link to={`/page`}><button onClick={prevPage}>Prev</button></Link>
-              <Link to={`/page`}><button onClick={nextPage}>Next</button></Link>
+              {/* <Link to={`/page`}>Prev</Link>
+              <Link to={`/page`}>Next</Link> */}
             </Route>
           </div>
           <Route path="/categories" component={CategoryList}/>
