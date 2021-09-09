@@ -16,7 +16,7 @@ const Product = props => {
 
     return (
         <div className="product">
-            <button onClick={() => onClick(product)}>favorite</button>
+            <button onClick={() => onClick(product)}>Add to favorite</button>
             <Link to={url}>
                 <div className="product-img">
                     <img src={product.image_front_small_url} alt={name} />

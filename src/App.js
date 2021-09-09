@@ -20,18 +20,15 @@ const App = props => {
             <Header />
             <div id="main">
               <Route path="/page/:page">
-                <div className="grid">
-                  <ListView />
-                </div>
-                {/* <Link to={`/page`}>Prev</Link>
-                <Link to={`/page`}>Next</Link> */}
+                <ListView />
               </Route>
-            </div>
+            
             <Route path="/categories" component={CategoryList}/>
             <Route path="/categories/:categoryURL/:id" children={<Category/>}/>
             <Route path="/products/:id" children={<Details/>}/>
             <Route path="/favorites" component={Favorites}/>
             <Route path="/random"/>
+            </div>
             <Footer />
           </FavoriteProvider>
         </Router>

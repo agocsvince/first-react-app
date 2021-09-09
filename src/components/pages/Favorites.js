@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import Product from '../Product';
 import { FavoriteContext } from '../FavoriteContext';
+import '../../css/product.css';
 
 
 const Favorites = props => {
@@ -11,9 +12,11 @@ const Favorites = props => {
     return (
         <div>
             <h1>Favorites</h1>
-            {favorites.map((fav) => (
-                <Product key={fav.id} product={fav}/>
-            ))}
+            <div className="grid">
+                {favorites.map((fav) => (
+                    <Product key={fav.id} product={fav}/>
+                ))}
+            </div>
         </div>
     )
 }

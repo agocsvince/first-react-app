@@ -2,6 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import {Link, useParams} from 'react-router-dom';
+import Product from '../Product';
 
 const Category  = () => {
     const [category, setCategory] = useState([]);
@@ -18,11 +19,16 @@ const Category  = () => {
     }, [categoryURL, id])
 
     return (
-        <div>
-            {category.map((product) => (<h4 key={product.id}><Link to={`/products/${product.id}`}>{product.product_name}</Link></h4>))}
+        <div className="grid category-list">
+            {/* {category.map((product) => (<h4 key={product.id}><Link to={`/products/${product.id}`}>{product.product_name}</Link></h4>))} */}
             {/* `https://fr-en.openfoodfacts.org/products/${product.id}.json` */}
             {/* <Link to={`/products/${product.id}`}></Link> */}
             {/* <Link to={`products/${product.id}`}></Link> */}
+            {category.map((product) => (
+                    <span key={product.id}>
+                        <Product key={product.id} product={product} />
+                    </span>))
+                }
 
         </div>
     )
