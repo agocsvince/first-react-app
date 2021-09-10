@@ -1,8 +1,5 @@
 import React from 'react'
-import  { BrowserRouter as Router, Route } from 'react-router-dom';
-import Category from './Category';
-import Details from './Details';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const CategoryList = () => {
     return (

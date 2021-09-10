@@ -1,7 +1,6 @@
 import './App.css';
 import './css/style.css'
-import react, { useEffect } from 'react';
-import  { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import  { BrowserRouter as Router, Route } from 'react-router-dom';
 import CategoryList from './components/pages/CategoryList';
 import Category from './components/pages/Category';
 import Header from './components/layouts/Header';
