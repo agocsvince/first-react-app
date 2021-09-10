@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import {Link, useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const Details = () => {
 
@@ -24,7 +24,7 @@ const Details = () => {
             <div>
                 <h4 key={attribute.id}>ID: {attribute.id}</h4>
                 <h4 key={attribute.product_name}>Name: {attribute.product_name}</h4>
-                <img key={attribute.image_url} src={attribute.image_url}/>
+                <img key={attribute.image_url} src={attribute.image_url} alt={attribute.product_name}/>
             </div>))}
         </div>
     )
